@@ -31,4 +31,4 @@ free(ptr);
 
 Like in real malloc(), First MyMalloc() function requires size as a parameter, and then the function will allocate that much of memory from that 25000 bytes pool (it search best-fit memory location for that given size of memory and allocate it ). Finally, the function returns its pointer.
 
-MyFree() is also requires a pointer of allocated memory as a parameter and working exactly like real free().
+MyFree() is also requires a pointer of allocated memory as a parameter and working exactly like real free() and free  that allocated memory.
