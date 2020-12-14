@@ -30,7 +30,15 @@ free(ptr);
 25000 Bytes long array considered as memory and all allocation are done using that memory. The simulated version of malloc() is called MyMalloc() and the simulated version of free() is called MyFree().
 
 Like in real malloc(), First MyMalloc() function requires size as a parameter, and then the function will allocate that much of memory from that 25000 bytes pool (it search best-fit memory location for that given size of memory and allocate it ). Finally, the function returns its pointer.
-![alt text](https://diigopost.files.wordpress.com/2015/06/malloc_implementation.png)
+
+![memory_image](https://diigopost.files.wordpress.com/2015/06/malloc_implementation.png)
+<br>
 When an allocation is happening, 25000 Bytes of the memory pool divide into the various size of memory blocks. To connect those memory blocks, all memory blocks are put into the linked-list. Every memory block is connected to two other blocks except head and tail blocks. To track the information about those memory blocks, meta-data is used.  Every memory block has its meta-data section. meta-data will track whether that block is allocated or not, the size of the block, and the pointer of the next block.
 
-MyFree() is also requires a pointer of allocated memory as a parameter and working exactly like real free() and free  that allocated memory.
+MyFree() is also requires a pointer of allocated memory as a parameter and working exactly like real free() 
+function set the allocated block as free by changing the metadata of that allocated memory block. Then check whether's next or/and previous blocks are free, if those are free, those blocks are merged with newly freed block and create a new block.
+
+### Files 
+- mymalloc.c  - implementation of MyMalloc()/MyFree()
+- mymalloc.h  - Declarations related to MyMalloc()/MyFree()
+- testCases.c - Sample Test Cases
