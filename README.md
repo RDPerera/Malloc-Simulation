@@ -25,7 +25,7 @@ Syntax of free()
 
 free(ptr);
 
-In this “Malloc and Free” Simulation,
+### In this “Malloc and Free” Simulation,
 
 25000 Bytes long array considered as memory and all allocation are done using that memory. The simulated version of malloc() is called MyMalloc() and the simulated version of free() is called MyFree().
 
