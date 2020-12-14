@@ -1,10 +1,10 @@
 # Malloc-Simulation
 
-Malloc() and Free()
+## Malloc() and Free()
 
-In C language array is a collection of a fixed number of values. Once the size of an array is declared, you cannot change it. sometimes the size of the array you declared may be insufficient. To solve this issue, you can allocate memory manually during run-time. This is known as dynamic memory allocation in C programming. To allocate memory dynamically, library functions are malloc(), calloc(), realloc() and free() are used. These functions are defined in the <stdlib.h> header file.
+In C language array is a collection of a fixed number of values. Once the size of an array is declared, you cannot change it. sometimes the size of the array you declared may be insufficient. To solve this issue, you can allocate memory manually during run-time. This is known as **dynamic memory allocation** in C programming. To allocate memory dynamically, library functions are malloc(), calloc(), realloc() and free() are used. These functions are defined in the <stdlib.h> header file.
 
-malloc()
+### malloc()
 
 The name “malloc” stands for memory allocation. The malloc() function reserves a block of memory of the specified number of bytes. And, it returns a pointer of void which can be cast into a pointer of any form.
 
@@ -18,7 +18,7 @@ The above statement allocates 400 bytes of memory. It’s because the size of fl
 
 The expression results in a NULL pointer if the memory cannot be allocated.
 
-free()
+### free()
 Like other languages in C dynamically allocated memory created with malloc() doesn’t get freed on its own. the developer must explicitly use free() to release the space he allocated previously.
 
 Syntax of free()
